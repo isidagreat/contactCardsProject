@@ -1,0 +1,60 @@
+/*CSS Reset*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*styles wrapper*/
+#wrapper{
+	width: 1000px;
+	padding: 10px;
+	/*background-color: black;*/
+	margin: auto;
+
+}
+/*Styles leftPane*/
+#leftPane{
+	width:49.5%;
+	height:600px;
+	/*background-color: red;*/
+	display: inline-block;
+	vertical-align: top;
+}
+/*styles rightPane*/
+#rightPane{
+	width: 49.5%;
+	height:600px;
+	padding: 0%;
+	display:inline-block;
+	background-color: purple;
+	vertical-align: top;
+}
+.userInput input{
+display: block;
+margin-top: 1%;
+}
+.userInput p{
+	display: inline-block;
+	margin-top: 1%;
+}
+.name{
+	display: inline-block;
+	/*width: 3%;*/
+	vertical-align: top;
+}
+.description{
+	width: 46%;
+	height: 100px;
+}
+
+.contactStyle{
+
+	width:450px;
+	height: 190px;
+	margin-left:5%;
+	margin-top:1%;
+	display: inline-block;
+	/*vertical-align: middle;*/
+	margin-top: 1%;
+	background-color:white; 
+	text-align: center;
+}

@@ -1,0 +1,114 @@
+<!-- This is the contact card project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Card</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on("click","button",function(){
+				console.log("button pressed");
+				$(".firstContact h5").on("click",function(){
+					$(".firstContact").empty();
+					$(".firstContact").append("<p>"+description1+"</p>")
+					console.log(description1);
+
+				});
+				$(".secondContact h5").on("click",function(){
+					$(".secondContact").empty();
+					$(".secondContact").append("<p>"+description2+"</p>")
+					console.log(description2);
+
+				});
+				$(".thirdContact h5").on("click",function(){
+					$(".thirdContact").empty();
+					$(".thirdContact").append("<p>"+description3+"</p>")
+					console.log(description3);
+
+				});
+			});
+			var counter= 1;
+			var description1="";
+			var description2="";
+			var description3="";
+			$("button").click(function(){
+					var fname = $(".name").val();
+					var lname = $(".lname").val();
+				
+				if (counter ==1) {
+					description1= $(".description").val();
+
+					$(".firstContact").empty();
+					$(".firstContact").append("<h1>"+fname+" "+ lname+"</h1>");
+					// $(".firstContact h1:last").append("<p>"+description+"</p>");
+					$(".firstContact h1:last").append("<h5>Click here for description</h5>");
+					
+					$("document").on("click","button",function(){
+					console.log("button pressed");
+			});
+					
+				}
+				if (counter ==2) {
+
+					description2= $(".description").val();
+					$(".secondContact").empty();
+					$(".secondContact").append("<h1>"+fname+" "+ lname+"</h1>");
+					// $(".secondContact h1:last").append("<p>"+description+"</p>");
+					$(".secondContact h1:last").append("<h5>Click here for description</h5>");
+					
+					
+				}
+				if (counter ==3) {
+					
+					description3= $(".description").val();
+					$(".thirdContact").empty();
+					$(".thirdContact").append("<h1>"+fname+" "+ lname+"</h1>");
+					// $(".thirdContact h1:last").append("<p>"+description+"</p>");
+					$(".thirdContact h1:last").append("<h5>Click here for description</h5>");
+					counter = 0;
+					
+				}
+				counter++;
+				console.log(counter);
+			});
+			
+
+
+		});
+	</script>
+</head>
+<body>
+	<!-- Contains websiter content -->
+	<div id="wrapper">
+		<!-- Contains the header -->
+		
+		<!-- Contains leftPane -->
+		<div id="leftPane">
+			<!-- The leftPane contains the form users will use to input contacts info -->
+			<form class="userInput">
+				<p>First Name:</p><input type="text" name="fName" class="name">
+				<p>Last Name:</p><input type="text" name="lName" class="lname">
+				Description<input type="text" name="description" class="description">
+			</form>
+			<button class="btn" type="submit" value="submit">add user</button>
+		</div>
+		<!-- Contains rightPane -->
+		<div id="rightPane">
+			<!-- Three divs will be used for three displayed entries at a time -->
+			<div class="firstContact contactStyle">
+				
+			</div>
+			<div class="secondContact contactStyle">
+				
+			</div>
+			<div class="thirdContact contactStyle">
+				
+			</div>
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>
